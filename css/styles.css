@@ -192,9 +192,17 @@ h1, h2, h3, h4, h5 {
 }
 
 .logo-img {
-  height: 44px;
+  height: 40px;
   width: auto;
   object-fit: contain;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 7px;
+}
+
+.footer-logo-img {
+  height: 36px;
+  opacity: 0.9;
 }
 
 .logo-text {
