@@ -1109,6 +1109,68 @@ h1, h2, h3, h4, h5 {
 .form-group select:focus,
 .form-group textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-glow); }
 
+.form-section-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  background: var(--primary-light);
+  border-left: 3px solid var(--primary);
+  padding: 7px 12px;
+  border-radius: 0 6px 6px 0;
+  margin: 20px 0 12px;
+}
+
+.field-hint {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.form-sub {
+  display: none;
+  background: var(--bg);
+  border: 1px solid var(--border-accent);
+  border-radius: 8px;
+  padding: 14px;
+  margin-top: -4px;
+  margin-bottom: 4px;
+}
+
+.form-sub label {
+  color: var(--primary) !important;
+}
+
+.char-count {
+  text-align: right;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.checkbox-label {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--text);
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  accent-color: var(--primary);
+  margin-top: 1px;
+  cursor: pointer;
+}
+
 .form-note { text-align: center; font-size: 0.78rem; color: var(--text-muted); margin-top: 10px; }
 
 .form-success {

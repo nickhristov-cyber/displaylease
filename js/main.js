@@ -129,6 +129,40 @@
     });
   });
 
+  // ── Conditional sub-dropdowns (Section A) ─────────────
+  const inquiryType   = document.getElementById('inquiryType');
+  const subHost       = document.getElementById('sub-host');
+  const subAdvertiser = document.getElementById('sub-advertiser');
+  const subTechnical  = document.getElementById('sub-technical');
+
+  function updateSubDropdowns() {
+    if (!inquiryType) return;
+    const val = inquiryType.value;
+    [subHost, subAdvertiser, subTechnical].forEach(el => {
+      if (el) el.style.display = 'none';
+    });
+    if (val === 'host'       && subHost)        subHost.style.display = 'block';
+    if (val === 'advertiser' && subAdvertiser)  subAdvertiser.style.display = 'block';
+    if (val === 'technical'  && subTechnical)   subTechnical.style.display = 'block';
+  }
+
+  if (inquiryType) {
+    inquiryType.addEventListener('change', updateSubDropdowns);
+    updateSubDropdowns();
+  }
+
+  // ── Character counter (Section E) ─────────────────────
+  const descField = document.getElementById('description');
+  const charCount = document.getElementById('charCount');
+
+  if (descField && charCount) {
+    descField.addEventListener('input', () => {
+      const len = descField.value.length;
+      charCount.textContent = len;
+      charCount.style.color = len > 900 ? 'var(--accent)' : 'var(--text-muted)';
+    });
+  }
+
   // ── Contact form ──────────────────────────────────
   const form = document.getElementById('contactForm');
   const formSuccess = document.getElementById('formSuccess');

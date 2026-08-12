@@ -870,50 +870,147 @@
         </div>
 
         <div class="contact-form-wrap" data-animate>
+          <!-- ACTION: Replace YOUR_FORM_ID with your Formspree form ID from formspree.io -->
           <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <h3>Request a Free Quote</h3>
+            <input type="hidden" name="_subject" value="New DisplayLease Inquiry — displaylease.com" />
+
+            <h3>Request a Quote</h3>
+
+            <!-- Personal Details -->
+            <div class="form-section-title">Your Details</div>
             <div class="form-row">
               <div class="form-group">
-                <label for="name">Your Name *</label>
-                <input type="text" id="name" name="name" required placeholder="John Borg" />
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="first_name" required placeholder="John" />
               </div>
               <div class="form-group">
-                <label for="company">Company / Business</label>
-                <input type="text" id="company" name="company" placeholder="Your Business Name" />
+                <label for="surname">Surname *</label>
+                <input type="text" id="surname" name="surname" required placeholder="Borg" />
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" required placeholder="you@example.com" />
+                <label for="emailAddr">Email Address *</label>
+                <input type="email" id="emailAddr" name="email" required placeholder="you@example.com" />
               </div>
               <div class="form-group">
-                <label for="phone">Phone / WhatsApp</label>
-                <input type="tel" id="phone" name="phone" placeholder="+356 xxxx xxxx" />
+                <label for="mobile">Mobile Number * <span class="field-hint">(Malta +356)</span></label>
+                <input type="tel" id="mobile" name="mobile" required placeholder="+356 xxxx xxxx" />
               </div>
             </div>
+
+            <!-- Section A -->
+            <div class="form-section-title">A) My Inquiry Is About</div>
             <div class="form-group">
-              <label for="interest">I'm interested in…</label>
-              <select id="interest" name="interest">
-                <option value="">— Select an option —</option>
-                <option value="lease-poster">Lease to Own — LED Folding Poster</option>
-                <option value="lease-screen">Lease to Own — Fixed Modular Screen</option>
-                <option value="rental-free">Rental — Cost-Free Hosting Plan</option>
-                <option value="rental-advertising">Rental — Advertising Plan</option>
-                <option value="content-management">Content Management Service</option>
-                <option value="other">Other / Not sure yet</option>
+              <label for="inquiryType">Select inquiry type *</label>
+              <select id="inquiryType" name="inquiry_type" required>
+                <option value="">— Please select —</option>
+                <option value="host">1. I have space suitable for an advertising display (HOST)</option>
+                <option value="advertiser">2. I am an ADVERTISER seeking DisplayLease display spaces</option>
+                <option value="technical">3. Technical Inquiry / I need technical assistance</option>
               </select>
             </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="Tell us about your location, your business and what you'd like to achieve..."></textarea>
+
+            <!-- A sub: HOST plans -->
+            <div class="form-group form-sub" id="sub-host">
+              <label for="hostPlan">Select Hosting Plan</label>
+              <select id="hostPlan" name="host_plan">
+                <option value="">— Select a plan —</option>
+                <option value="LP01/24">1a. Plan LP01/24 — Long Term Lease to Own (24 months)</option>
+                <option value="RP01">1b. Plan RP01 — Win/Win "HOST GETS PAID" Rental</option>
+                <option value="RP02">1c. Plan RP02 — Win/Win "No Billing / No Taxing" Barter</option>
+                <option value="RP03/50">1d. Plan RP03/50 — Shared Cost: Payment + 50% Advert Value</option>
+                <option value="RP03/75">1e. Plan RP03/75 — Shared Cost: Payment + 75% Advert Value</option>
+                <option value="RP04">1f. Plan RP04 — Full Time 100% Advertising Benefit for Host</option>
+              </select>
             </div>
+
+            <!-- A sub: ADVERTISER options -->
+            <div class="form-group form-sub" id="sub-advertiser">
+              <label for="advertiserType">Select Display Type</label>
+              <select id="advertiserType" name="advertiser_display_type">
+                <option value="">— Select display type —</option>
+                <option value="indoor-poster">2a. Indoor — Fold Poster H1.92m × W0.64m (modular built-up also available)</option>
+                <option value="outdoor-p25-s">2b.1. Outdoor P2.5 — 1.2m² to 2.5m² display area</option>
+                <option value="outdoor-p25-m">2b.2. Outdoor P2.5 — 2.5m² to 5m² display area</option>
+                <option value="outdoor-p25-l">2b.3. Outdoor P2.5 — Above 5m² / Custom Shape (Corner, Rounded, Oval, Cube…)</option>
+                <option value="outdoor-p40-s">2c.1. Outdoor P4.0 — 1.4m² to 2.2m² display area</option>
+                <option value="outdoor-p40-m">2c.2. Outdoor P4.0 — 2.2m² to 4.4m² display area</option>
+                <option value="outdoor-p40-l">2c.3. Outdoor P4.0 — Above 4.4m² / Custom Shape (Corner, Rounded, 3D Effect…)</option>
+              </select>
+            </div>
+
+            <!-- A sub: TECHNICAL -->
+            <div class="form-group form-sub" id="sub-technical">
+              <label for="technicalType">Technical Inquiry Type</label>
+              <select id="technicalType" name="technical_type">
+                <option value="">— Select issue type —</option>
+                <option value="repair">3a. My LED Display has technical problems — I need repair assistance</option>
+                <option value="upgrade">3b. I would like to upgrade my current LED display</option>
+              </select>
+            </div>
+
+            <!-- Section B -->
+            <div class="form-section-title">B) Product I Am Interested In</div>
+            <div class="form-group">
+              <label for="productInterest">Select product</label>
+              <select id="productInterest" name="product_interest">
+                <option value="">— Select product —</option>
+                <option value="fold-poster">1. LED Fold Poster</option>
+                <option value="indoor-modular">2. LED Indoor Modular Screen</option>
+                <option value="outdoor-modular">3. LED Outdoor Modular Display</option>
+                <option value="custom">4. Customised LED Project — please describe in Section E</option>
+              </select>
+            </div>
+
+            <!-- Section C -->
+            <div class="form-section-title">C) How Long Do You Need to Display?</div>
+            <div class="form-group">
+              <label for="duration">Select duration</label>
+              <select id="duration" name="display_duration">
+                <option value="">— Select duration —</option>
+                <option value="single-event">1. Single Event / One-time announcement</option>
+                <option value="few-weeks">2. A couple of weeks / Promotional campaign</option>
+                <option value="six-months-plus">3. Six months or longer / Brand image maintenance</option>
+                <option value="community">4. Community Announcement(s)</option>
+                <option value="indefinite">5. Indefinite</option>
+              </select>
+            </div>
+
+            <!-- Section D -->
+            <div class="form-section-title">D) How Will You Manage Display Content?</div>
+            <div class="form-group">
+              <label for="contentMgmt">Select content option</label>
+              <select id="contentMgmt" name="content_management">
+                <option value="">— Select content option —</option>
+                <option value="own-shared">1. I have my own content — happy to share display time with other advertisers</option>
+                <option value="exclusive">2. I want exclusivity — 100% of display time for my content only</option>
+                <option value="need-help">3. I need DisplayLease to help create and develop my advertising content</option>
+              </select>
+            </div>
+
+            <!-- Section E -->
+            <div class="form-section-title">E) Additional Details</div>
+            <div class="form-group">
+              <label for="description">Description, comments or notes <span class="field-hint">(max 1000 characters)</span></label>
+              <textarea id="description" name="description" rows="4" maxlength="1000" placeholder="Please describe your requirements, location details, or any specific needs…"></textarea>
+              <div class="char-count"><span id="charCount">0</span> / 1000 characters</div>
+            </div>
+
+            <!-- T&C -->
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="terms_accepted" value="yes" required />
+                <span>I declare that my inquiry is compliant with the Terms and Conditions of this website *</span>
+              </label>
+            </div>
+
             <button type="submit" class="btn btn-primary btn-block">
               <i class="fa-solid fa-paper-plane"></i> Send Enquiry
             </button>
             <p class="form-note">We typically respond within 24 hours on business days.</p>
             <div class="form-success" id="formSuccess" style="display:none;">
-              <i class="fa-solid fa-circle-check"></i> Thank you! We'll be in touch shortly.
+              <i class="fa-solid fa-circle-check"></i> Thank you! Your enquiry has been received. We'll be in touch shortly.
             </div>
           </form>
         </div>
