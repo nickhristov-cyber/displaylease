@@ -1214,12 +1214,9 @@ h1, h2, h3, h4, h5 {
 .footer-logo-link { display: inline-block; margin-bottom: 4px; }
 
 .footer-banner-img {
-  max-width: 300px;
+  max-width: 320px;
   width: 100%;
   height: auto;
-  background: white;
-  padding: 8px 12px;
-  border-radius: 8px;
   display: block;
 }
 
