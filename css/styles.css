@@ -1151,24 +1151,33 @@ h1, h2, h3, h4, h5 {
   margin-top: 4px;
 }
 
-.checkbox-label {
-  display: flex !important;
+.checkbox-wrap {
+  display: flex;
   align-items: flex-start;
   gap: 10px;
-  cursor: pointer;
-  font-size: 0.85rem;
-  color: var(--text);
-  text-transform: none !important;
-  letter-spacing: 0 !important;
 }
 
-.checkbox-label input[type="checkbox"] {
+.checkbox-wrap input[type="checkbox"] {
   width: 18px;
   height: 18px;
+  min-width: 18px;
   flex-shrink: 0;
+  margin-top: 2px;
   accent-color: var(--primary);
-  margin-top: 1px;
   cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.checkbox-wrap label {
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
+  color: var(--text) !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  cursor: pointer;
+  line-height: 1.5;
 }
 
 .form-note { text-align: center; font-size: 0.78rem; color: var(--text-muted); margin-top: 10px; }
