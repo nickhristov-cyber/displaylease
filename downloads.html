@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Downloads | DisplayLease Malta — Forms &amp; Documents</title>
+  <meta name="description" content="Download DisplayLease Malta forms, agreements, and product brochures for LED display rental and leasing services in Malta and Gozo." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.displaylease.com/downloads.html" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    /* ── Page-specific styles ── */
+    .page-hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      padding: 60px 0 50px;
+      text-align: center;
+      margin-top: var(--nav-height);
+      color: white;
+    }
+    .page-hero h1 { font-family: var(--font-heading); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 12px; }
+    .page-hero p  { font-size: 1rem; opacity: 0.85; max-width: 540px; margin: 0 auto; }
+    .page-hero .page-hero-icon { font-size: 3rem; margin-bottom: 16px; opacity: 0.9; }
+
+    .downloads-section { padding: 70px 0; background: var(--bg); }
+
+    .dl-category { margin-bottom: 56px; }
+    .dl-category-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      border-left: 4px solid var(--primary);
+      padding-left: 14px;
+      margin-bottom: 24px;
+    }
+
+    .dl-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .dl-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      transition: box-shadow var(--transition), transform var(--transition);
+      text-decoration: none;
+      color: inherit;
+    }
+    .dl-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+      border-color: var(--primary);
+    }
+
+    .dl-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .dl-icon.pdf   { background: #FFF0F0; color: #CC1124; }
+    .dl-icon.word  { background: #EEF4FF; color: #2461AE; }
+    .dl-icon.excel { background: #F0FFF4; color: #1a7a3c; }
+
+    .dl-info h3 { font-size: 0.95rem; font-weight: 600; color: var(--text-heading); margin-bottom: 4px; }
+    .dl-info p  { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 10px; }
+    .dl-meta    { font-size: 0.72rem; color: var(--text-muted); display: flex; align-items: center; gap: 6px; }
+    .dl-meta i  { color: var(--primary); }
+
+    .dl-coming-soon {
+      background: var(--primary-light);
+      border: 2px dashed var(--border-accent);
+      border-radius: 12px;
+      padding: 40px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .dl-coming-soon i { font-size: 2rem; color: var(--primary); opacity: 0.4; margin-bottom: 12px; display: block; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="site-header" id="header">
+    <nav class="nav-container">
+      <a href="index.html" class="logo" aria-label="DisplayLease Home">
+        <img src="images/logo.png" alt="DisplayLease Malta Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <span class="logo-text" style="display:none;">
+          <span class="logo-primary">Display</span><span class="logo-accent">Lease</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="downloads.html" class="active">Downloads</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="index.html#contact" class="nav-cta">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <div class="page-hero">
+    <div class="container">
+      <div class="page-hero-icon"><i class="fa-solid fa-file-arrow-down"></i></div>
+      <h1>Downloads</h1>
+      <p>Forms, agreements, brochures and product sheets — everything you need to get started with DisplayLease.</p>
+    </div>
+  </div>
+
+  <!-- ===== DOWNLOADS SECTION ===== -->
+  <section class="downloads-section">
+    <div class="container">
+
+      <!-- Enquiry & Agreement Forms -->
+      <div class="dl-category" data-animate>
+        <div class="dl-category-title"><i class="fa-solid fa-file-signature"></i> &nbsp;Enquiry &amp; Agreement Forms</div>
+        <div class="dl-grid">
+
+          <!-- ADD YOUR FILES BELOW — replace href="#" with the path to your file, e.g. href="files/enquiry-form.pdf" -->
+
+          <a class="dl-card" href="#" target="_blank" rel="noopener">
+            <div class="dl-icon pdf"><i class="fa-solid fa-file-pdf"></i></div>
+            <div class="dl-info">
+              <h3>General Enquiry Form</h3>
+              <p>Print and complete this form if you prefer to submit your enquiry by hand or email.</p>
+              <div class="dl-meta"><i class="fa-solid fa-file-pdf"></i> PDF &nbsp;|&nbsp; <i class="fa-solid fa-download"></i> Download</div>
+            </div>
+          </a>
+
+          <a class="dl-card" href="#" target="_blank" rel="noopener">
+            <div class="dl-icon word"><i class="fa-solid fa-file-word"></i></div>
+            <div class="dl-info">
+              <h3>Host Site Agreement</h3>
+              <p>Terms and conditions for property owners hosting a DisplayLease LED screen.</p>
+              <div class="dl-meta"><i class="fa-solid fa-file-word"></i> DOCX &nbsp;|&nbsp; <i class="fa-solid fa-download"></i> Download</div>
+            </div>
+          </a>
+
+          <a class="dl-card" href="#" target="_blank" rel="noopener">
+            <div class="dl-icon pdf"><i class="fa-solid fa-file-pdf"></i></div>
+            <div class="dl-info">
+              <h3>Advertiser Booking Form</h3>
+              <p>Book advertising slots on existing DisplayLease screens across Malta and Gozo.</p>
+              <div class="dl-meta"><i class="fa-solid fa-file-pdf"></i> PDF &nbsp;|&nbsp; <i class="fa-solid fa-download"></i> Download</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Pricing & Plans -->
+      <div class="dl-category" data-animate>
+        <div class="dl-category-title"><i class="fa-solid fa-tags"></i> &nbsp;Pricing &amp; Plans</div>
+        <div class="dl-grid">
+
+          <a class="dl-card" href="#" target="_blank" rel="noopener">
+            <div class="dl-icon excel"><i class="fa-solid fa-file-excel"></i></div>
+            <div class="dl-info">
+              <h3>Monthly Rental Pricing Schedule</h3>
+              <p>Full breakdown of all rental and lease-to-own plans with pricing details.</p>
+              <div class="dl-meta"><i class="fa-solid fa-file-excel"></i> XLSX &nbsp;|&nbsp; <i class="fa-solid fa-download"></i> Download</div>
+            </div>
+          </a>
+
+          <a class="dl-card" href="#" target="_blank" rel="noopener">
+            <div class="dl-icon pdf"><i class="fa-solid fa-file-pdf"></i></div>
+            <div class="dl-info">
+              <h3>Advertising Rate Card</h3>
+              <p>Advertising slot pricing and availability across our network of LED screens.</p>
+              <div class="dl-meta"><i class="fa-solid fa-file-pdf"></i> PDF &nbsp;|&nbsp; <i class="fa-solid fa-download"></i> Download</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Product Brochures -->
+      <div class="dl-category" data-animate>
+        <div class="dl-category-title"><i class="fa-solid fa-book-open"></i> &nbsp;Product Brochures &amp; Specs</div>
+        <div class="dl-grid">
+
+          <a class="dl-card" href="#" target="_blank" rel="noopener">
+            <div class="dl-icon pdf"><i class="fa-solid fa-file-pdf"></i></div>
+            <div class="dl-info">
+              <h3>LED Fold Poster — Spec Sheet</h3>
+              <p>Technical specifications for the H1.92m × W0.64m indoor LED fold poster.</p>
+              <div class="dl-meta"><i class="fa-solid fa-file-pdf"></i> PDF &nbsp;|&nbsp; <i class="fa-solid fa-download"></i> Download</div>
+            </div>
+          </a>
+
+          <a class="dl-card" href="#" target="_blank" rel="noopener">
+            <div class="dl-icon pdf"><i class="fa-solid fa-file-pdf"></i></div>
+            <div class="dl-info">
+              <h3>Indoor Modular Screen — Spec Sheet</h3>
+              <p>Full specifications for our indoor modular fixed LED screen range.</p>
+              <div class="dl-meta"><i class="fa-solid fa-file-pdf"></i> PDF &nbsp;|&nbsp; <i class="fa-solid fa-download"></i> Download</div>
+            </div>
+          </a>
+
+          <a class="dl-card" href="#" target="_blank" rel="noopener">
+            <div class="dl-icon pdf"><i class="fa-solid fa-file-pdf"></i></div>
+            <div class="dl-info">
+              <h3>Outdoor Modular Display — Spec Sheet</h3>
+              <p>P2.5 and P4.0 outdoor LED modular display technical data sheets.</p>
+              <div class="dl-meta"><i class="fa-solid fa-file-pdf"></i> PDF &nbsp;|&nbsp; <i class="fa-solid fa-download"></i> Download</div>
+            </div>
+          </a>
+
+          <a class="dl-card" href="#" target="_blank" rel="noopener">
+            <div class="dl-icon pdf"><i class="fa-solid fa-file-pdf"></i></div>
+            <div class="dl-info">
+              <h3>DisplayLease Company Brochure</h3>
+              <p>Overview of all services, plans and products offered by DisplayLease Malta.</p>
+              <div class="dl-meta"><i class="fa-solid fa-file-pdf"></i> PDF &nbsp;|&nbsp; <i class="fa-solid fa-download"></i> Download</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Content Guidelines -->
+      <div class="dl-category" data-animate>
+        <div class="dl-category-title"><i class="fa-solid fa-image"></i> &nbsp;Content &amp; Design Guidelines</div>
+        <div class="dl-grid">
+
+          <a class="dl-card" href="#" target="_blank" rel="noopener">
+            <div class="dl-icon word"><i class="fa-solid fa-file-word"></i></div>
+            <div class="dl-info">
+              <h3>Content Submission Guidelines</h3>
+              <p>File format, resolution and content policy requirements for advertisers.</p>
+              <div class="dl-meta"><i class="fa-solid fa-file-word"></i> PDF &nbsp;|&nbsp; <i class="fa-solid fa-download"></i> Download</div>
+            </div>
+          </a>
+
+          <div class="dl-coming-soon">
+            <i class="fa-solid fa-clock"></i>
+            <strong>More documents coming soon</strong><br />
+            Additional templates and guides will be added here shortly.
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo-link">
+            <img src="images/footer.png" alt="DisplayLease — Dream * Create * Display Without Delay" class="footer-banner-img" onerror="this.style.display='none';" />
+          </a>
+          <p>Malta's premier LED display rental and leasing specialists. Helping businesses across Malta make an outstanding impact with premium digital signage.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="downloads.html">Downloads</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="index.html#services">LED Screen Rental Malta</a></li>
+            <li><a href="index.html#pricing">Lease to Own</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+35699685980">+356 9968 5980</a>
+            </li>
+            <li>
+              <i class="fa-brands fa-whatsapp"></i>
+              <a href="https://wa.me/35699685980" target="_blank" rel="noopener">WhatsApp Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> DisplayLease — Nick Hristov T/as Display Lease. All rights reserved.</p>
+        <p class="footer-tagline">LED Display Rental &amp; Leasing Malta | Digital Signage Malta</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/35699685980" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

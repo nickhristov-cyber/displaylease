@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Videos | DisplayLease Malta — Tutorials &amp; Showcases</title>
+  <meta name="description" content="Watch DisplayLease Malta tutorial videos, product showcases and installation guides for LED display rental and leasing in Malta and Gozo." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.displaylease.com/videos.html" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    /* ── Page-specific styles ── */
+    .page-hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      padding: 60px 0 50px;
+      text-align: center;
+      margin-top: var(--nav-height);
+      color: white;
+    }
+    .page-hero h1 { font-family: var(--font-heading); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 12px; }
+    .page-hero p  { font-size: 1rem; opacity: 0.85; max-width: 540px; margin: 0 auto; }
+    .page-hero .page-hero-icon { font-size: 3rem; margin-bottom: 16px; opacity: 0.9; }
+
+    .videos-section { padding: 70px 0; background: var(--bg); }
+
+    .vid-category { margin-bottom: 56px; }
+    .vid-category-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      border-left: 4px solid var(--primary);
+      padding-left: 14px;
+      margin-bottom: 24px;
+    }
+
+    .vid-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 28px;
+    }
+
+    .vid-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+    .vid-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+
+    .vid-embed {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 */
+      background: #000;
+    }
+    .vid-embed iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Placeholder for videos not yet added */
+    .vid-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--primary-light) 0%, #dce8f8 100%);
+      color: var(--primary);
+      gap: 10px;
+    }
+    .vid-placeholder i { font-size: 3rem; opacity: 0.4; }
+    .vid-placeholder span { font-size: 0.8rem; opacity: 0.6; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+
+    .vid-info { padding: 18px 20px; }
+    .vid-info h3 { font-size: 0.97rem; font-weight: 700; color: var(--text-heading); margin-bottom: 6px; }
+    .vid-info p  { font-size: 0.82rem; color: var(--text-muted); line-height: 1.55; }
+
+    .vid-coming-soon {
+      background: var(--primary-light);
+      border: 2px dashed var(--border-accent);
+      border-radius: 14px;
+      padding: 50px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .vid-coming-soon i { font-size: 2.5rem; color: var(--primary); opacity: 0.35; margin-bottom: 14px; display: block; }
+
+    @media (max-width: 640px) {
+      .vid-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="site-header" id="header">
+    <nav class="nav-container">
+      <a href="index.html" class="logo" aria-label="DisplayLease Home">
+        <img src="images/logo.png" alt="DisplayLease Malta Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <span class="logo-text" style="display:none;">
+          <span class="logo-primary">Display</span><span class="logo-accent">Lease</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="videos.html" class="active">Videos</a></li>
+        <li><a href="index.html#contact" class="nav-cta">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <div class="page-hero">
+    <div class="container">
+      <div class="page-hero-icon"><i class="fa-solid fa-circle-play"></i></div>
+      <h1>Videos</h1>
+      <p>Product tutorials, installation guides and showcase videos to help you make the most of DisplayLease screens.</p>
+    </div>
+  </div>
+
+  <!-- ===== VIDEOS SECTION ===== -->
+  <section class="videos-section">
+    <div class="container">
+
+      <!-- Product Tutorials -->
+      <div class="vid-category" data-animate>
+        <div class="vid-category-title"><i class="fa-solid fa-chalkboard-user"></i> &nbsp;Product Tutorials</div>
+        <div class="vid-grid">
+
+          <!-- HOW TO ADD A VIDEO:
+               1. Upload your video to YouTube (or use an existing YouTube link)
+               2. Get the video ID from the URL: https://www.youtube.com/watch?v=VIDEO_ID_HERE
+               3. Replace the src in the iframe below with:
+                  https://www.youtube.com/embed/VIDEO_ID_HERE
+               4. Update the title and description text
+          -->
+
+          <div class="vid-card">
+            <div class="vid-embed">
+              <!-- Replace VIDEO_ID with your YouTube video ID -->
+              <!-- <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="LED Fold Poster Setup Guide" allowfullscreen loading="lazy"></iframe> -->
+              <div class="vid-placeholder">
+                <i class="fa-brands fa-youtube"></i>
+                <span>Coming Soon</span>
+              </div>
+            </div>
+            <div class="vid-info">
+              <h3>LED Fold Poster — Setup &amp; Operation Guide</h3>
+              <p>Step-by-step walkthrough for assembling, powering on and configuring your LED fold poster display.</p>
+            </div>
+          </div>
+
+          <div class="vid-card">
+            <div class="vid-embed">
+              <div class="vid-placeholder">
+                <i class="fa-brands fa-youtube"></i>
+                <span>Coming Soon</span>
+              </div>
+            </div>
+            <div class="vid-info">
+              <h3>Indoor Modular Screen — Installation Guide</h3>
+              <p>How to install, connect and configure the indoor modular LED screen panels.</p>
+            </div>
+          </div>
+
+          <div class="vid-card">
+            <div class="vid-embed">
+              <div class="vid-placeholder">
+                <i class="fa-brands fa-youtube"></i>
+                <span>Coming Soon</span>
+              </div>
+            </div>
+            <div class="vid-info">
+              <h3>Controller Unit — Content Upload Tutorial</h3>
+              <p>Learn how to upload and schedule content on your DisplayLease controller unit.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Showcases -->
+      <div class="vid-category" data-animate>
+        <div class="vid-category-title"><i class="fa-solid fa-star"></i> &nbsp;Showcases &amp; Case Studies</div>
+        <div class="vid-grid">
+
+          <div class="vid-card">
+            <div class="vid-embed">
+              <div class="vid-placeholder">
+                <i class="fa-brands fa-youtube"></i>
+                <span>Coming Soon</span>
+              </div>
+            </div>
+            <div class="vid-info">
+              <h3>Outdoor LED Display — Live Installation Malta</h3>
+              <p>Watch a full outdoor modular LED display installation at one of our Malta host sites.</p>
+            </div>
+          </div>
+
+          <div class="vid-card">
+            <div class="vid-embed">
+              <div class="vid-placeholder">
+                <i class="fa-brands fa-youtube"></i>
+                <span>Coming Soon</span>
+              </div>
+            </div>
+            <div class="vid-info">
+              <h3>Advertising Campaign Showcase</h3>
+              <p>Examples of successful advertising campaigns delivered through DisplayLease screens across Malta.</p>
+            </div>
+          </div>
+
+          <div class="vid-coming-soon">
+            <i class="fa-solid fa-film"></i>
+            <strong>More videos being added soon</strong><br /><br />
+            Subscribe to our YouTube channel or check back regularly for new tutorials and showcase videos.
+          </div>
+
+        </div>
+      </div>
+
+      <!-- How It Works -->
+      <div class="vid-category" data-animate>
+        <div class="vid-category-title"><i class="fa-solid fa-circle-info"></i> &nbsp;How It Works</div>
+        <div class="vid-grid">
+
+          <div class="vid-card">
+            <div class="vid-embed">
+              <div class="vid-placeholder">
+                <i class="fa-brands fa-youtube"></i>
+                <span>Coming Soon</span>
+              </div>
+            </div>
+            <div class="vid-info">
+              <h3>Host Programme Explained</h3>
+              <p>Everything a property owner needs to know about hosting a DisplayLease screen and the benefits available.</p>
+            </div>
+          </div>
+
+          <div class="vid-card">
+            <div class="vid-embed">
+              <div class="vid-placeholder">
+                <i class="fa-brands fa-youtube"></i>
+                <span>Coming Soon</span>
+              </div>
+            </div>
+            <div class="vid-info">
+              <h3>Advertiser Onboarding — Getting Started</h3>
+              <p>How to book your first advertising campaign on the DisplayLease network in Malta and Gozo.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo-link">
+            <img src="images/footer.png" alt="DisplayLease — Dream * Create * Display Without Delay" class="footer-banner-img" onerror="this.style.display='none';" />
+          </a>
+          <p>Malta's premier LED display rental and leasing specialists. Helping businesses across Malta make an outstanding impact with premium digital signage.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="downloads.html">Downloads</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="index.html#services">LED Screen Rental Malta</a></li>
+            <li><a href="index.html#pricing">Lease to Own</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+35699685980">+356 9968 5980</a>
+            </li>
+            <li>
+              <i class="fa-brands fa-whatsapp"></i>
+              <a href="https://wa.me/35699685980" target="_blank" rel="noopener">WhatsApp Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> DisplayLease — Nick Hristov T/as Display Lease. All rights reserved.</p>
+        <p class="footer-tagline">LED Display Rental &amp; Leasing Malta | Digital Signage Malta</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/35699685980" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
