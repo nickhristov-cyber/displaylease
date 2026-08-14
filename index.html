@@ -82,8 +82,27 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#services">Services</a></li>
+
+        <!-- Products dropdown -->
+        <li class="nav-dropdown">
+          <a href="#products" class="nav-dropdown-toggle">Products <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="#product-poster"><i class="fa-solid fa-rectangle-vertical"></i> LED Fold Posters</a></li>
+            <li><a href="#product-indoor"><i class="fa-solid fa-tv"></i> Indoor Modular Displays</a></li>
+            <li><a href="#product-outdoor"><i class="fa-solid fa-solar-panel"></i> Outdoor Modular Displays</a></li>
+          </ul>
+        </li>
+
+        <!-- Services dropdown -->
+        <li class="nav-dropdown">
+          <a href="#services" class="nav-dropdown-toggle">Services <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="#services-hosts"><i class="fa-solid fa-building"></i> For Display Hosts</a></li>
+            <li><a href="#services-advertisers"><i class="fa-solid fa-bullhorn"></i> For Advertisers</a></li>
+            <li><a href="#services-content"><i class="fa-solid fa-photo-film"></i> Display Content</a></li>
+          </ul>
+        </li>
+
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="downloads.html">Downloads</a></li>
         <li><a href="videos.html">Videos</a></li>
@@ -294,7 +313,7 @@
       </div>
 
       <!-- Product 1: LED Folding Poster -->
-      <div class="product-showcase" data-animate>
+      <div class="product-showcase" id="product-poster" data-animate>
         <div class="product-showcase-header">
           <div class="product-icon"><i class="fa-solid fa-rectangle-vertical"></i></div>
           <div>
@@ -330,7 +349,7 @@
       </div>
 
       <!-- Product 2: Indoor Fixed Screen -->
-      <div class="product-showcase product-showcase-alt" data-animate>
+      <div class="product-showcase product-showcase-alt" id="product-indoor" data-animate>
         <div class="product-showcase-header">
           <div class="product-icon"><i class="fa-solid fa-tv"></i></div>
           <div>
@@ -364,7 +383,7 @@
       </div>
 
       <!-- Product 3: Outdoor Displays -->
-      <div class="product-showcase" data-animate>
+      <div class="product-showcase" id="product-outdoor" data-animate>
         <div class="product-showcase-header">
           <div class="product-icon"><i class="fa-solid fa-solar-panel"></i></div>
           <div>
@@ -435,7 +454,7 @@
       <div class="services-two-col" data-animate>
 
         <!-- HOSTS -->
-        <div class="services-group services-group-host">
+        <div class="services-group services-group-host" id="services-hosts">
           <div class="services-group-header">
             <div class="services-group-icon"><i class="fa-solid fa-building"></i></div>
             <div>
@@ -483,7 +502,7 @@
         </div>
 
         <!-- ADVERTISERS -->
-        <div class="services-group services-group-advertiser">
+        <div class="services-group services-group-advertiser" id="services-advertisers">
           <div class="services-group-header">
             <div class="services-group-icon services-group-icon-accent"><i class="fa-solid fa-bullhorn"></i></div>
             <div>
@@ -545,7 +564,7 @@
       </div>
 
       <!-- Content Management add-on -->
-      <div class="addon-block" data-animate>
+      <div class="addon-block" id="services-content" data-animate>
         <div class="addon-content">
           <i class="fa-solid fa-photo-film"></i>
           <div>

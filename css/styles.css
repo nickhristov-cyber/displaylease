@@ -213,6 +213,69 @@ h1, h2, h3, h4, h5 {
 .logo-primary { color: var(--primary); }
 .logo-accent  { color: var(--accent); }
 
+/* ── Dropdown nav ── */
+.nav-dropdown { position: relative; }
+
+.nav-dropdown-toggle { display: flex !important; align-items: center; gap: 5px; }
+
+.nav-arrow {
+  font-size: 0.65rem;
+  transition: transform var(--transition);
+  opacity: 0.6;
+}
+
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 220px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(36, 97, 174, 0.14);
+  padding: 6px;
+  z-index: 2000;
+  list-style: none;
+}
+
+.nav-dropdown-menu li a {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px !important;
+  border-radius: 8px;
+  font-size: 0.85rem !important;
+  color: var(--text) !important;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background var(--transition), color var(--transition);
+}
+
+.nav-dropdown-menu li a i {
+  width: 16px;
+  text-align: center;
+  color: var(--primary);
+  font-size: 0.8rem;
+}
+
+.nav-dropdown-menu li a:hover {
+  background: var(--primary-light);
+  color: var(--primary) !important;
+}
+
+/* Show on hover (desktop) */
+.nav-dropdown:hover > .nav-dropdown-menu,
+.nav-dropdown.open > .nav-dropdown-menu {
+  display: block;
+}
+
+.nav-dropdown:hover > .nav-dropdown-toggle .nav-arrow,
+.nav-dropdown.open > .nav-dropdown-toggle .nav-arrow {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
 /* Nav links */
 .nav-links {
   display: flex;
@@ -1841,6 +1904,17 @@ h1, h2, h3, h4, h5 {
   /* Extra top padding for two-row mobile header */
   .hero          { padding-top: 130px; }
   .page-hero     { margin-top: 0 !important; padding-top: 130px; }
+
+  /* Mobile dropdowns — appear below the scrolling nav strip */
+  .nav-dropdown-menu {
+    position: fixed;
+    top: auto;
+    left: 8px;
+    right: 8px;
+    min-width: unset;
+    width: calc(100vw - 16px);
+    border-radius: 12px;
+  }
 
   .about-grid           { grid-template-columns: 1fr; gap: 40px; }
   .about-card-grid      { grid-template-columns: 1fr 1fr; }

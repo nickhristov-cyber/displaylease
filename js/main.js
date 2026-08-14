@@ -100,6 +100,34 @@
 
   initAnimations();
 
+  // ── Nav dropdowns (tap toggle on mobile, close on outside click) ──
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      const isMobile = window.innerWidth <= 768;
+      if (!isMobile) return; // desktop handled by CSS hover
+      e.preventDefault();
+      const li = toggle.closest('.nav-dropdown');
+      const isOpen = li.classList.contains('open');
+      // close all
+      document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('open'));
+      if (!isOpen) li.classList.add('open');
+    });
+  });
+
+  // Close dropdown when a sub-link is clicked
+  document.querySelectorAll('.nav-dropdown-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('open'));
+    });
+  });
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-dropdown')) {
+      document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('open'));
+    }
+  });
+
   // ── Conditional sub-dropdowns (Section A) ─────────────
   const inquiryType   = document.getElementById('inquiryType');
   const subHost       = document.getElementById('sub-host');

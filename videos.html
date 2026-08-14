@@ -128,14 +128,33 @@
         <span></span><span></span><span></span>
       </button>
 
-      <ul class="nav-links" id="navLinks">
+            <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#products">Products</a></li>
-        <li><a href="index.html#services">Services</a></li>
+
+        <!-- Products dropdown -->
+        <li class="nav-dropdown">
+          <a href="index.html#products" class="nav-dropdown-toggle">Products <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="index.html#product-poster"><i class="fa-solid fa-rectangle-vertical"></i> LED Fold Posters</a></li>
+            <li><a href="index.html#product-indoor"><i class="fa-solid fa-tv"></i> Indoor Modular Displays</a></li>
+            <li><a href="index.html#product-outdoor"><i class="fa-solid fa-solar-panel"></i> Outdoor Modular Displays</a></li>
+          </ul>
+        </li>
+
+        <!-- Services dropdown -->
+        <li class="nav-dropdown">
+          <a href="index.html#services" class="nav-dropdown-toggle">Services <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="index.html#services-hosts"><i class="fa-solid fa-building"></i> For Display Hosts</a></li>
+            <li><a href="index.html#services-advertisers"><i class="fa-solid fa-bullhorn"></i> For Advertisers</a></li>
+            <li><a href="index.html#services-content"><i class="fa-solid fa-photo-film"></i> Display Content</a></li>
+          </ul>
+        </li>
+
         <li><a href="index.html#pricing">Pricing</a></li>
         <li><a href="downloads.html">Downloads</a></li>
-        <li><a href="videos.html" class="active">Videos</a></li>
+        <li><a href="videos.html">Videos</a></li>
         <li><a href="index.html#contact" class="nav-cta">Send Enquiry</a></li>
       </ul>
     </nav>
@@ -355,3 +374,4 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
