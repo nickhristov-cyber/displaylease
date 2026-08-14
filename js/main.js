@@ -100,35 +100,6 @@
 
   initAnimations();
 
-  // ── Pricing tabs ──────────────────────────────────
-  const pricingTabs = document.querySelectorAll('.pricing-tab');
-  const pricingPanels = {
-    poster: document.getElementById('tab-poster'),
-    screen: document.getElementById('tab-screen'),
-  };
-
-  pricingTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const target = tab.dataset.tab;
-
-      pricingTabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-
-      Object.entries(pricingPanels).forEach(([key, panel]) => {
-        if (!panel) return;
-        if (key === target) {
-          panel.classList.remove('hidden');
-          // Re-trigger animations for newly visible elements
-          panel.querySelectorAll('[data-animate]:not(.animated)').forEach(el => {
-            setTimeout(() => el.classList.add('animated'), 50);
-          });
-        } else {
-          panel.classList.add('hidden');
-        }
-      });
-    });
-  });
-
   // ── Conditional sub-dropdowns (Section A) ─────────────
   const inquiryType   = document.getElementById('inquiryType');
   const subHost       = document.getElementById('sub-host');
