@@ -65,8 +65,19 @@ h1, h2, h3, h4, h5 {
 }
 
 /* ── Sections ── */
-.section { padding: 96px 0; background: var(--bg-alt); }
-.section-dark { background: var(--bg); }
+.section {
+  padding: 96px 0;
+  background-color: var(--bg-alt);
+  background-image:
+    radial-gradient(circle, rgba(36, 97, 174, 0.065) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+.section-dark {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle, rgba(36, 97, 174, 0.055) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
 
 .section-header {
   text-align: center;
@@ -357,24 +368,26 @@ h1, h2, h3, h4, h5 {
   position: relative;
   overflow: hidden;
   padding-top: var(--nav-height);
-  background: var(--bg-alt);
+  background: #060f1e;
 }
 
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(36, 97, 174, 0.07) 0%, transparent 70%),
-              linear-gradient(180deg, #EFF5FF 0%, #F4F8FD 100%);
+  background:
+    radial-gradient(ellipse 80% 55% at 15% 30%, rgba(36, 97, 174, 0.65) 0%, transparent 55%),
+    radial-gradient(ellipse 65% 70% at 88% 75%, rgba(204, 17, 36, 0.35) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 45% at 55% 50%, rgba(0, 180, 255, 0.18) 0%, transparent 60%),
+    #060f1e;
 }
 
 .hero-grid {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(36, 97, 174, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(36, 97, 174, 0.05) 1px, transparent 1px);
-  background-size: 50px 50px;
-  mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, transparent 80%);
+    radial-gradient(circle, rgba(255, 255, 255, 0.18) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black 0%, transparent 90%);
 }
 
 .hero-content {
@@ -423,7 +436,7 @@ h1, h2, h3, h4, h5 {
 
 .hero-subtitle {
   font-size: clamp(1rem, 2vw, 1.2rem);
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.80);
   max-width: 580px;
   margin: 0 auto 40px;
 }
@@ -438,16 +451,17 @@ h1, h2, h3, h4, h5 {
 
 .hero-actions .btn-primary { background: var(--accent); border-color: var(--accent); color: white; }
 .hero-actions .btn-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
-.hero-actions .btn-outline { border-color: var(--primary); color: var(--primary); }
+.hero-actions .btn-outline { border-color: rgba(255,255,255,0.6); color: rgba(255,255,255,0.9); background: rgba(255,255,255,0.07); }
+.hero-actions .btn-outline:hover { border-color: white; color: white; background: rgba(255,255,255,0.15); }
 
 .hero-stats {
   display: inline-flex;
   align-items: center;
-  background: var(--white);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 16px;
   padding: 20px 32px;
-  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(8px);
 }
 
 .stat { display: flex; flex-direction: column; align-items: center; padding: 0 28px; }
@@ -456,12 +470,12 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-heading);
   font-size: 2rem;
   font-weight: 800;
-  color: var(--primary);
+  color: #ffffff;
   line-height: 1;
 }
 
-.stat-label { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; white-space: nowrap; }
-.stat-divider { width: 1px; height: 40px; background: var(--border); }
+.stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.65); margin-top: 4px; white-space: nowrap; }
+.stat-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.2); }
 
 .hero-scroll-hint {
   position: absolute;
@@ -473,7 +487,7 @@ h1, h2, h3, h4, h5 {
   align-items: center;
   gap: 6px;
   font-size: 0.75rem;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.45);
   animation: bounce 2s infinite;
 }
 
