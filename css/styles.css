@@ -216,6 +216,17 @@ h1, h2, h3, h4, h5 {
 /* ── Dropdown nav ── */
 .nav-dropdown { position: relative; }
 
+/* Invisible bridge fills any sub-pixel gap between toggle and menu */
+.nav-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: transparent;
+}
+
 .nav-dropdown-toggle { display: flex !important; align-items: center; gap: 5px; }
 
 .nav-arrow {
@@ -227,16 +238,18 @@ h1, h2, h3, h4, h5 {
 .nav-dropdown-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 8px);
+  top: 100%;
   left: 0;
   min-width: 220px;
   background: white;
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 0 0 12px 12px;
   box-shadow: 0 8px 32px rgba(36, 97, 174, 0.14);
-  padding: 6px;
+  padding: 4px 6px 8px;
   z-index: 2000;
   list-style: none;
+  /* Extend hover area upward so cursor never leaves the element */
+  margin-top: 0;
 }
 
 .nav-dropdown-menu li a {
