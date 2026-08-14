@@ -748,14 +748,14 @@ h1, h2, h3, h4, h5 {
 }
 
 .pricing-subsection + .pricing-subsection {
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid var(--border);
 }
 
 .pricing-subsection-header {
   display: flex;
   align-items: center;
   gap: 18px;
-  background: rgba(255,255,255,0.06);
+  background: var(--primary-light);
   border-left: 4px solid var(--primary);
   border-radius: 0 12px 12px 0;
   padding: 18px 24px;
@@ -789,13 +789,13 @@ h1, h2, h3, h4, h5 {
 .pricing-subsection-header h3 {
   font-size: 1.2rem;
   font-weight: 700;
-  color: white;
+  color: var(--primary);
   margin-bottom: 4px;
 }
 
 .pricing-subsection-spec {
   font-size: 0.82rem;
-  color: rgba(255,255,255,0.55);
+  color: var(--text-muted);
   margin: 0;
 }
 
@@ -803,8 +803,8 @@ h1, h2, h3, h4, h5 {
   display: flex;
   align-items: flex-start;
   gap: 24px;
-  background: rgba(255,255,255,0.04);
-  border: 1px dashed rgba(255,255,255,0.2);
+  background: var(--primary-light);
+  border: 1px dashed var(--border-accent);
   border-radius: 16px;
   padding: 36px 32px;
 }
@@ -820,13 +820,13 @@ h1, h2, h3, h4, h5 {
 .pricing-outdoor-placeholder h3 {
   font-size: 1.1rem;
   font-weight: 700;
-  color: white;
+  color: var(--primary);
   margin-bottom: 10px;
 }
 
 .pricing-outdoor-placeholder p {
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.65);
+  color: var(--text-muted);
   line-height: 1.65;
   margin-bottom: 20px;
 }
