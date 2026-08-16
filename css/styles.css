@@ -16,3 +16,13 @@
 .pricing-group-header h3{font-size:3.6rem;font-weight:800;line-height:1.1;margin-bottom:6px}
 @media(max-width:768px){.pricing-group-header h3{font-size:2rem}}
 @media(max-width:480px){.pricing-group-header h3{font-size:1.6rem}}
+
+.recaptcha-group{margin:16px 0}
+.recaptcha-widget{display:inline-flex;align-items:center;justify-content:space-between;gap:16px;background:#f9f9f9;border:1px solid #d3d3d3;border-radius:4px;padding:14px 18px;width:300px;max-width:100%;box-shadow:0 2px 6px rgba(0,0,0,0.07)}
+.recaptcha-left{display:flex;align-items:center;gap:14px;flex:1}
+.recaptcha-cb{width:24px !important;height:24px !important;min-width:24px !important;cursor:pointer;accent-color:var(--primary);flex-shrink:0}
+.recaptcha-label{font-size:.9rem;color:#2c2c2c;cursor:pointer;font-weight:500;line-height:1.3}
+.recaptcha-right{display:flex;flex-direction:column;align-items:center;gap:2px;flex-shrink:0}
+.recaptcha-logo{width:36px;height:36px;background:linear-gradient(160deg,#4285f4 0%,#34a853 60%,#ea4335 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;color:#fff}
+.recaptcha-brand{font-size:.58rem;color:#6b6b6b;letter-spacing:.06em;font-weight:700;text-transform:uppercase;margin-top:3px}
+.recaptcha-links{font-size:.5rem;color:#aaa;letter-spacing:.02em}
