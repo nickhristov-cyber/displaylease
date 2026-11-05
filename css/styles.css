@@ -17,6 +17,9 @@
 .pl24-term{text-align:center;white-space:nowrap;padding:0 6px}
 .pl24-vborder{border-left:1px solid var(--border-accent)}
 .pl24-remark{font-size:.66rem;color:var(--text-muted);padding:4px 10px 6px;font-style:italic;border-top:1px solid var(--border)}
+.rp-prices .rp-size-row{display:flex;justify-content:space-between;align-items:center;padding:3px 10px;border-bottom:1px solid var(--border);font-size:.74rem}
+.rp-prices .rp-dim{color:var(--text-muted);font-size:.7rem}
+.rp-prices .rp-p{font-weight:700;color:var(--primary);font-size:.82rem;white-space:nowrap;padding-left:8px}
 
 .price-from{font-size:.82rem;font-weight:700;letter-spacing:.04em;vertical-align:middle;margin-right:2px}
 .pricing-group-host .price-from,.pricing-group-host .price-currency,.pricing-group-host .price-amount:not(.free){color:var(--primary)}
